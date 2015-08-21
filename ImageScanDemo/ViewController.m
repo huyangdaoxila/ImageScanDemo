@@ -24,6 +24,7 @@
     _imageScanButton.layer.masksToBounds = YES ;
     _imageScanButton.layer.cornerRadius = 5.f ;
     [_imageScanButton setBackgroundColor:[UIColor greenColor]];
+    
 }
 
 - (void)didReceiveMemoryWarning {
