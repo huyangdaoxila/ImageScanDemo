@@ -34,6 +34,9 @@
 		268399841B86D6EF002299E6 /* 16.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 268399741B86D6EF002299E6 /* 16.JPG */; };
 		268399891B86F942002299E6 /* CALayer+Transition.m in Sources */ = {isa = PBXBuildFile; fileRef = 268399861B86F942002299E6 /* CALayer+Transition.m */; };
 		2683998A1B86F942002299E6 /* UCZProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 268399881B86F942002299E6 /* UCZProgressView.m */; };
+		2683998D1B871492002299E6 /* ImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2683998C1B871492002299E6 /* ImageModel.m */; };
+		268399901B87158D002299E6 /* ImageTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2683998F1B87158D002299E6 /* ImageTopView.m */; };
+		268399931B8715A2002299E6 /* ImageBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 268399921B8715A2002299E6 /* ImageBottomView.m */; };
 		5C57420DDF56C08D11EE0FA1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD27C1B9529D347C6B73D0E8 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -109,6 +112,12 @@
 		268399861B86F942002299E6 /* CALayer+Transition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Transition.m"; sourceTree = "<group>"; };
 		268399871B86F942002299E6 /* UCZProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCZProgressView.h; sourceTree = "<group>"; };
 		268399881B86F942002299E6 /* UCZProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCZProgressView.m; sourceTree = "<group>"; };
+		2683998B1B871492002299E6 /* ImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageModel.h; sourceTree = "<group>"; };
+		2683998C1B871492002299E6 /* ImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageModel.m; sourceTree = "<group>"; };
+		2683998E1B87158D002299E6 /* ImageTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTopView.h; sourceTree = "<group>"; };
+		2683998F1B87158D002299E6 /* ImageTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTopView.m; sourceTree = "<group>"; };
+		268399911B8715A2002299E6 /* ImageBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageBottomView.h; sourceTree = "<group>"; };
+		268399921B8715A2002299E6 /* ImageBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageBottomView.m; sourceTree = "<group>"; };
 		2FC3681AFF9F67D20D51E7C8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A487C3E94A3B6DC115201669 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		BD27C1B9529D347C6B73D0E8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,7 +149,6 @@
 				268399421B86D694002299E6 /* Masonry */,
 				2683993A1B86D5BB002299E6 /* Class */,
 				268399131B86D340002299E6 /* ImageScanDemo */,
-				2683992D1B86D340002299E6 /* ImageScanDemoTests */,
 				268399121B86D340002299E6 /* Products */,
 				ABF3970DB57EDD3AF284EF0A /* Pods */,
 				99F700DCC616D291EB3C2C65 /* Frameworks */,
@@ -177,6 +185,7 @@
 				268399151B86D340002299E6 /* Info.plist */,
 				268399161B86D340002299E6 /* main.m */,
 				268399411B86D66F002299E6 /* ImageScan.pch */,
+				2683992D1B86D340002299E6 /* ImageScanDemoTests */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -188,7 +197,7 @@
 				2683992E1B86D340002299E6 /* Supporting Files */,
 			);
 			path = ImageScanDemoTests;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		2683992E1B86D340002299E6 /* Supporting Files */ = {
 			isa = PBXGroup;
@@ -209,6 +218,12 @@
 				2683993C1B86D61E002299E6 /* ImageScanViewController.m */,
 				2683993E1B86D63D002299E6 /* SingleImageScanViewController.h */,
 				2683993F1B86D63D002299E6 /* SingleImageScanViewController.m */,
+				2683998B1B871492002299E6 /* ImageModel.h */,
+				2683998C1B871492002299E6 /* ImageModel.m */,
+				2683998E1B87158D002299E6 /* ImageTopView.h */,
+				2683998F1B87158D002299E6 /* ImageTopView.m */,
+				268399911B8715A2002299E6 /* ImageBottomView.h */,
+				268399921B8715A2002299E6 /* ImageBottomView.m */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -442,11 +457,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				268399901B87158D002299E6 /* ImageTopView.m in Sources */,
 				2683991D1B86D340002299E6 /* ViewController.m in Sources */,
 				268399401B86D63D002299E6 /* SingleImageScanViewController.m in Sources */,
 				2683991A1B86D340002299E6 /* AppDelegate.m in Sources */,
+				2683998D1B871492002299E6 /* ImageModel.m in Sources */,
 				268399171B86D340002299E6 /* main.m in Sources */,
 				268399891B86F942002299E6 /* CALayer+Transition.m in Sources */,
+				268399931B8715A2002299E6 /* ImageBottomView.m in Sources */,
 				2683998A1B86F942002299E6 /* UCZProgressView.m in Sources */,
 				2683993D1B86D61E002299E6 /* ImageScanViewController.m in Sources */,
 			);

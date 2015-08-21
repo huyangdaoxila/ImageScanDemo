@@ -7,9 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ImageModel.h"
+
+@protocol SingleImageScanViewControllerDelegate <NSObject>
+
+@optional
+
+- (void)didSingleTapAtIndex:(NSInteger)index;
+
+@end
 
 @interface SingleImageScanViewController : UIViewController
 
-@property (strong , nonatomic) UIImage *displayImage ;
+@property (strong , nonatomic) ImageModel *model ;
+
+@property (weak   , nonatomic) id<SingleImageScanViewControllerDelegate>singleTapDelegate ;
 
 @end

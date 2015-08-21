@@ -34,7 +34,22 @@
 }
 - (IBAction)imageScanAction:(id)sender
 {
+    NSMutableArray *imageArray = [[NSMutableArray alloc] init];
+    for (int i = 0 ; i < 6 ; i++) {
+        NSString *imageName = [NSString stringWithFormat:@"0%d.JPG",i+1];
+        UIImage *img = [UIImage imageNamed:imageName];
+        
+        ImageModel *model = [[ImageModel alloc] init];
+        model.image = img ;
+        model.bottomDesc = [NSString stringWithFormat:@"这是第%d张图片",i+1];
+        [imageArray addObject:model];
+    }
+    
     ImageScanViewController *imageScanVC = [[ImageScanViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:@{UIPageViewControllerOptionInterPageSpacingKey: @30}];
+    imageScanVC.showBottomView = YES ;
+    imageScanVC.showTopView = NO ;
+    imageScanVC.firstIndex = 0 ;
+    imageScanVC.imageDatasource = [[NSArray alloc] initWithArray:imageArray];
     [self presentViewController:imageScanVC animated:YES completion:nil];
 }
 

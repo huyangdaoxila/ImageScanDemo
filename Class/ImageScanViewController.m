@@ -9,14 +9,48 @@
 #import "ImageScanViewController.h"
 #import "SingleImageScanViewController.h"
 
-@interface ImageScanViewController ()<UIPageViewControllerDelegate,
-                                      UIPageViewControllerDataSource>
 
-@property (strong , nonatomic) NSArray *pageContent ;
+
+@interface ImageScanViewController ()<UIPageViewControllerDelegate,
+                                      UIPageViewControllerDataSource,
+                                      SingleImageScanViewControllerDelegate>
+
+{
+    BOOL additionViewHidden;
+}
+
+@property (assign , nonatomic) NSInteger       currentPage ;
+@property (strong , nonatomic) ImageTopView    *topView ;
+@property (strong , nonatomic) ImageBottomView *bottomView ;
+@property (strong , nonatomic) ImageModel      *imageModel;
 
 @end
 
 @implementation ImageScanViewController
+
+#pragma mark --- 初始化,以及一些默认值的设定
+
+- (instancetype)initWithTransitionStyle:(UIPageViewControllerTransitionStyle)style navigationOrientation:(UIPageViewControllerNavigationOrientation)navigationOrientation options:(NSDictionary *)options
+{
+    self = [super initWithTransitionStyle:style navigationOrientation:navigationOrientation options:options];
+    if (self) {
+        [self initData];
+    }
+    return self;
+}
+
+- (void)initData
+{
+    self.delegate = self;
+    self.dataSource = self;
+    self.showTopView = YES ;
+    self.topHeight = 64.f;
+    self.bottomHeight = 118.f;
+    _currentPage = -1;
+    self.topViewBackgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5];
+    self.bottomViewBackgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5];
+}
+
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -35,17 +69,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor orangeColor];
+    self.view.backgroundColor = [UIColor blackColor];
     
-    [self createFakePageContent];
     
+    self.currentPage = _firstIndex ;
     self.delegate = self ;
     self.dataSource = self ;
     self.view.backgroundColor = [UIColor blackColor];
-    SingleImageScanViewController *currentVC = [self viewControllerAtIndex:0];
+    SingleImageScanViewController *currentVC = [self viewControllerAtIndex:_firstIndex];
     
     NSArray *viewControllers = @[currentVC];
     [self setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
+    
+    [self addTopView:_showTopView];
+    [self addBottomView:_showBottomView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -53,36 +90,25 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark --- 创建假的数据源
-
-- (void)createFakePageContent
-{
-    NSMutableArray *imageArray = [[NSMutableArray alloc] init];
-    for (int i = 0 ; i < 6 ; i++) {
-        NSString *imageName = [NSString stringWithFormat:@"0%d.JPG",i+1];
-        UIImage *img = [UIImage imageNamed:imageName];
-        [imageArray addObject:img];
-    }
-    self.pageContent = [[NSArray alloc] initWithArray:imageArray];
-}
 
 #pragma mark --- 获取当前的viewController
 
 - (SingleImageScanViewController *)viewControllerAtIndex:(NSInteger)index
 {
-    if (self.pageContent.count == 0 || index >= self.pageContent.count) {
+    if (self.imageDatasource.count == 0 || index >= self.imageDatasource.count) {
         return nil ;
     }
     
     SingleImageScanViewController *singleVC = [[SingleImageScanViewController alloc] init];
-    singleVC.displayImage = self.pageContent[index] ;
+    singleVC.model = self.imageDatasource[index];
+    singleVC.singleTapDelegate = self ;
     return singleVC ;
 }
 
 // 根据数组元素值，得到下标值
 - (NSUInteger)indexOfViewController:(SingleImageScanViewController *)viewController
 {
-    return [self.pageContent indexOfObject:viewController.displayImage];
+    return [self.imageDatasource indexOfObject:viewController.model];
 }
 
 #pragma mark --- UIPageViewControllerDataSource
@@ -110,10 +136,75 @@
         return nil ;
     }
     index ++ ;
-    if (index == self.pageContent.count) {
+    if (index == self.imageDatasource.count) {
         return nil ;
     }
     return [self viewControllerAtIndex:index];
+}
+
+#pragma mark --- 添加 topView 和 bottomView
+
+- (void)addTopView:(BOOL)showOrNot
+{
+    if (showOrNot == YES) {
+        if (!self.topView) {
+            self.topView = [[ImageTopView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), self.topHeight)];
+            self.topView.backgroundColor = self.topViewBackgroundColor;
+            [self.view addSubview:_topView];
+        }
+    }
+}
+
+- (void)addBottomView:(BOOL)showOrNot
+{
+    if (showOrNot == YES) {
+        if (!self.bottomView) {
+            self.bottomView = [[ImageBottomView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.view.bounds) - self.bottomHeight, CGRectGetWidth(self.view.bounds), self.bottomHeight)];
+            self.bottomView.backgroundColor = self.bottomViewBackgroundColor;
+            [self.view addSubview:_bottomView];
+        }
+    }
+}
+
+#pragma mark - Public<根据自己的需求自定义topView和bottomView>
+
+
+- (void)topViewSetting:(void(^)(ImageTopView *topView))setting
+{
+    if (setting) {
+        setting(_topView);
+    }
+}
+
+- (void)bottomViewSetting:(void(^)(ImageBottomView *bottomView))setting
+{
+    if (setting) {
+        setting(_bottomView);
+    }
+}
+
+- (void)didSingleTapAtIndex:(NSInteger)index
+{
+    if (additionViewHidden == YES) {
+        [self topAndBottomShow:YES];
+    }else{
+        [self topAndBottomHidden:YES];
+    }
+}
+
+
+- (void)topAndBottomShow:(BOOL)animation
+{
+    additionViewHidden = NO;
+    [_topView showAnimation:animation];
+    [_bottomView showAnimation:animation];
+}
+
+- (void)topAndBottomHidden:(BOOL)animation
+{
+    additionViewHidden = YES;
+    [_topView hiddenAnimation:animation];
+    [_bottomView hiddenAnimation:animation];
 }
 
 @end
