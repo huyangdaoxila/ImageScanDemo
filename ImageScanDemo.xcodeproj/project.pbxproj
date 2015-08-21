@@ -14,6 +14,33 @@
 		268399221B86D340002299E6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 268399211B86D340002299E6 /* Images.xcassets */; };
 		268399251B86D340002299E6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 268399231B86D340002299E6 /* LaunchScreen.xib */; };
 		268399311B86D340002299E6 /* ImageScanDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 268399301B86D340002299E6 /* ImageScanDemoTests.m */; };
+		2683993D1B86D61E002299E6 /* ImageScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2683993C1B86D61E002299E6 /* ImageScanViewController.m */; };
+		268399401B86D63D002299E6 /* SingleImageScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2683993F1B86D63D002299E6 /* SingleImageScanViewController.m */; };
+		2683995A1B86D694002299E6 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 268399441B86D694002299E6 /* MASCompositeConstraint.m */; };
+		2683995B1B86D694002299E6 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 268399471B86D694002299E6 /* MASConstraint.m */; };
+		2683995C1B86D694002299E6 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 268399491B86D694002299E6 /* MASConstraintMaker.m */; };
+		2683995D1B86D694002299E6 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 2683994B1B86D694002299E6 /* MASLayoutConstraint.m */; };
+		2683995E1B86D694002299E6 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 2683994F1B86D694002299E6 /* MASViewAttribute.m */; };
+		2683995F1B86D694002299E6 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 268399511B86D694002299E6 /* MASViewConstraint.m */; };
+		268399601B86D694002299E6 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 268399531B86D694002299E6 /* NSArray+MASAdditions.m */; };
+		268399611B86D694002299E6 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 268399561B86D694002299E6 /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		268399621B86D694002299E6 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 268399581B86D694002299E6 /* View+MASAdditions.m */; };
+		268399751B86D6EF002299E6 /* 01.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 268399651B86D6EF002299E6 /* 01.JPG */; };
+		268399761B86D6EF002299E6 /* 02.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 268399661B86D6EF002299E6 /* 02.JPG */; };
+		268399771B86D6EF002299E6 /* 03.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 268399671B86D6EF002299E6 /* 03.JPG */; };
+		268399781B86D6EF002299E6 /* 04.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 268399681B86D6EF002299E6 /* 04.JPG */; };
+		268399791B86D6EF002299E6 /* 05.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 268399691B86D6EF002299E6 /* 05.JPG */; };
+		2683997A1B86D6EF002299E6 /* 06.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2683996A1B86D6EF002299E6 /* 06.JPG */; };
+		2683997B1B86D6EF002299E6 /* 07.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2683996B1B86D6EF002299E6 /* 07.JPG */; };
+		2683997C1B86D6EF002299E6 /* 08.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2683996C1B86D6EF002299E6 /* 08.JPG */; };
+		2683997D1B86D6EF002299E6 /* 09.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2683996D1B86D6EF002299E6 /* 09.JPG */; };
+		2683997E1B86D6EF002299E6 /* 10.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2683996E1B86D6EF002299E6 /* 10.JPG */; };
+		2683997F1B86D6EF002299E6 /* 11.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 2683996F1B86D6EF002299E6 /* 11.JPG */; };
+		268399801B86D6EF002299E6 /* 12.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 268399701B86D6EF002299E6 /* 12.JPG */; };
+		268399811B86D6EF002299E6 /* 13.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 268399711B86D6EF002299E6 /* 13.JPG */; };
+		268399821B86D6EF002299E6 /* 14.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 268399721B86D6EF002299E6 /* 14.JPG */; };
+		268399831B86D6EF002299E6 /* 15.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 268399731B86D6EF002299E6 /* 15.JPG */; };
+		268399841B86D6EF002299E6 /* 16.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 268399741B86D6EF002299E6 /* 16.JPG */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +67,50 @@
 		2683992A1B86D340002299E6 /* ImageScanDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageScanDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2683992F1B86D340002299E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		268399301B86D340002299E6 /* ImageScanDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageScanDemoTests.m; sourceTree = "<group>"; };
+		2683993B1B86D61E002299E6 /* ImageScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageScanViewController.h; sourceTree = "<group>"; };
+		2683993C1B86D61E002299E6 /* ImageScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageScanViewController.m; sourceTree = "<group>"; };
+		2683993E1B86D63D002299E6 /* SingleImageScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleImageScanViewController.h; sourceTree = "<group>"; };
+		2683993F1B86D63D002299E6 /* SingleImageScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleImageScanViewController.m; sourceTree = "<group>"; };
+		268399411B86D66F002299E6 /* ImageScan.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageScan.pch; sourceTree = "<group>"; };
+		268399431B86D694002299E6 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
+		268399441B86D694002299E6 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
+		268399451B86D694002299E6 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
+		268399461B86D694002299E6 /* MASConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraint.h; sourceTree = "<group>"; };
+		268399471B86D694002299E6 /* MASConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraint.m; sourceTree = "<group>"; };
+		268399481B86D694002299E6 /* MASConstraintMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraintMaker.h; sourceTree = "<group>"; };
+		268399491B86D694002299E6 /* MASConstraintMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraintMaker.m; sourceTree = "<group>"; };
+		2683994A1B86D694002299E6 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASLayoutConstraint.h; sourceTree = "<group>"; };
+		2683994B1B86D694002299E6 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASLayoutConstraint.m; sourceTree = "<group>"; };
+		2683994C1B86D694002299E6 /* Masonry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Masonry.h; sourceTree = "<group>"; };
+		2683994D1B86D694002299E6 /* MASUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASUtilities.h; sourceTree = "<group>"; };
+		2683994E1B86D694002299E6 /* MASViewAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewAttribute.h; sourceTree = "<group>"; };
+		2683994F1B86D694002299E6 /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
+		268399501B86D694002299E6 /* MASViewConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewConstraint.h; sourceTree = "<group>"; };
+		268399511B86D694002299E6 /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
+		268399521B86D694002299E6 /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASAdditions.h"; sourceTree = "<group>"; };
+		268399531B86D694002299E6 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MASAdditions.m"; sourceTree = "<group>"; };
+		268399541B86D694002299E6 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		268399551B86D694002299E6 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		268399561B86D694002299E6 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		268399571B86D694002299E6 /* View+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASAdditions.h"; sourceTree = "<group>"; };
+		268399581B86D694002299E6 /* View+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "View+MASAdditions.m"; sourceTree = "<group>"; };
+		268399591B86D694002299E6 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		268399651B86D6EF002299E6 /* 01.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 01.JPG; sourceTree = "<group>"; };
+		268399661B86D6EF002299E6 /* 02.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 02.JPG; sourceTree = "<group>"; };
+		268399671B86D6EF002299E6 /* 03.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 03.JPG; sourceTree = "<group>"; };
+		268399681B86D6EF002299E6 /* 04.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 04.JPG; sourceTree = "<group>"; };
+		268399691B86D6EF002299E6 /* 05.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 05.JPG; sourceTree = "<group>"; };
+		2683996A1B86D6EF002299E6 /* 06.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 06.JPG; sourceTree = "<group>"; };
+		2683996B1B86D6EF002299E6 /* 07.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 07.JPG; sourceTree = "<group>"; };
+		2683996C1B86D6EF002299E6 /* 08.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 08.JPG; sourceTree = "<group>"; };
+		2683996D1B86D6EF002299E6 /* 09.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 09.JPG; sourceTree = "<group>"; };
+		2683996E1B86D6EF002299E6 /* 10.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10.JPG; sourceTree = "<group>"; };
+		2683996F1B86D6EF002299E6 /* 11.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 11.JPG; sourceTree = "<group>"; };
+		268399701B86D6EF002299E6 /* 12.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 12.JPG; sourceTree = "<group>"; };
+		268399711B86D6EF002299E6 /* 13.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 13.JPG; sourceTree = "<group>"; };
+		268399721B86D6EF002299E6 /* 14.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 14.JPG; sourceTree = "<group>"; };
+		268399731B86D6EF002299E6 /* 15.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 15.JPG; sourceTree = "<group>"; };
+		268399741B86D6EF002299E6 /* 16.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 16.JPG; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +134,8 @@
 		268399081B86D340002299E6 = {
 			isa = PBXGroup;
 			children = (
+				268399631B86D6AC002299E6 /* Resources */,
+				268399421B86D694002299E6 /* Masonry */,
 				2683993A1B86D5BB002299E6 /* Class */,
 				268399131B86D340002299E6 /* ImageScanDemo */,
 				2683992D1B86D340002299E6 /* ImageScanDemoTests */,
@@ -99,6 +172,7 @@
 			children = (
 				268399151B86D340002299E6 /* Info.plist */,
 				268399161B86D340002299E6 /* main.m */,
+				268399411B86D66F002299E6 /* ImageScan.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -123,8 +197,73 @@
 		2683993A1B86D5BB002299E6 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				2683993B1B86D61E002299E6 /* ImageScanViewController.h */,
+				2683993C1B86D61E002299E6 /* ImageScanViewController.m */,
+				2683993E1B86D63D002299E6 /* SingleImageScanViewController.h */,
+				2683993F1B86D63D002299E6 /* SingleImageScanViewController.m */,
 			);
 			path = Class;
+			sourceTree = "<group>";
+		};
+		268399421B86D694002299E6 /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				268399431B86D694002299E6 /* MASCompositeConstraint.h */,
+				268399441B86D694002299E6 /* MASCompositeConstraint.m */,
+				268399451B86D694002299E6 /* MASConstraint+Private.h */,
+				268399461B86D694002299E6 /* MASConstraint.h */,
+				268399471B86D694002299E6 /* MASConstraint.m */,
+				268399481B86D694002299E6 /* MASConstraintMaker.h */,
+				268399491B86D694002299E6 /* MASConstraintMaker.m */,
+				2683994A1B86D694002299E6 /* MASLayoutConstraint.h */,
+				2683994B1B86D694002299E6 /* MASLayoutConstraint.m */,
+				2683994C1B86D694002299E6 /* Masonry.h */,
+				2683994D1B86D694002299E6 /* MASUtilities.h */,
+				2683994E1B86D694002299E6 /* MASViewAttribute.h */,
+				2683994F1B86D694002299E6 /* MASViewAttribute.m */,
+				268399501B86D694002299E6 /* MASViewConstraint.h */,
+				268399511B86D694002299E6 /* MASViewConstraint.m */,
+				268399521B86D694002299E6 /* NSArray+MASAdditions.h */,
+				268399531B86D694002299E6 /* NSArray+MASAdditions.m */,
+				268399541B86D694002299E6 /* NSArray+MASShorthandAdditions.h */,
+				268399551B86D694002299E6 /* NSLayoutConstraint+MASDebugAdditions.h */,
+				268399561B86D694002299E6 /* NSLayoutConstraint+MASDebugAdditions.m */,
+				268399571B86D694002299E6 /* View+MASAdditions.h */,
+				268399581B86D694002299E6 /* View+MASAdditions.m */,
+				268399591B86D694002299E6 /* View+MASShorthandAdditions.h */,
+			);
+			path = Masonry;
+			sourceTree = "<group>";
+		};
+		268399631B86D6AC002299E6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				268399641B86D6EF002299E6 /* Pics */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		268399641B86D6EF002299E6 /* Pics */ = {
+			isa = PBXGroup;
+			children = (
+				268399651B86D6EF002299E6 /* 01.JPG */,
+				268399661B86D6EF002299E6 /* 02.JPG */,
+				268399671B86D6EF002299E6 /* 03.JPG */,
+				268399681B86D6EF002299E6 /* 04.JPG */,
+				268399691B86D6EF002299E6 /* 05.JPG */,
+				2683996A1B86D6EF002299E6 /* 06.JPG */,
+				2683996B1B86D6EF002299E6 /* 07.JPG */,
+				2683996C1B86D6EF002299E6 /* 08.JPG */,
+				2683996D1B86D6EF002299E6 /* 09.JPG */,
+				2683996E1B86D6EF002299E6 /* 10.JPG */,
+				2683996F1B86D6EF002299E6 /* 11.JPG */,
+				268399701B86D6EF002299E6 /* 12.JPG */,
+				268399711B86D6EF002299E6 /* 13.JPG */,
+				268399721B86D6EF002299E6 /* 14.JPG */,
+				268399731B86D6EF002299E6 /* 15.JPG */,
+				268399741B86D6EF002299E6 /* 16.JPG */,
+			);
+			path = Pics;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,9 +346,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				268399821B86D6EF002299E6 /* 14.JPG in Resources */,
+				2683997E1B86D6EF002299E6 /* 10.JPG in Resources */,
+				2683997B1B86D6EF002299E6 /* 07.JPG in Resources */,
+				268399761B86D6EF002299E6 /* 02.JPG in Resources */,
+				2683997D1B86D6EF002299E6 /* 09.JPG in Resources */,
+				268399841B86D6EF002299E6 /* 16.JPG in Resources */,
+				268399781B86D6EF002299E6 /* 04.JPG in Resources */,
+				2683997C1B86D6EF002299E6 /* 08.JPG in Resources */,
+				268399791B86D6EF002299E6 /* 05.JPG in Resources */,
 				268399201B86D340002299E6 /* Main.storyboard in Resources */,
+				268399771B86D6EF002299E6 /* 03.JPG in Resources */,
+				268399811B86D6EF002299E6 /* 13.JPG in Resources */,
+				2683997F1B86D6EF002299E6 /* 11.JPG in Resources */,
+				268399801B86D6EF002299E6 /* 12.JPG in Resources */,
+				268399831B86D6EF002299E6 /* 15.JPG in Resources */,
 				268399251B86D340002299E6 /* LaunchScreen.xib in Resources */,
+				268399751B86D6EF002299E6 /* 01.JPG in Resources */,
 				268399221B86D340002299E6 /* Images.xcassets in Resources */,
+				2683997A1B86D6EF002299E6 /* 06.JPG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,9 +382,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				268399611B86D694002299E6 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				2683991D1B86D340002299E6 /* ViewController.m in Sources */,
+				2683995F1B86D694002299E6 /* MASViewConstraint.m in Sources */,
+				268399401B86D63D002299E6 /* SingleImageScanViewController.m in Sources */,
 				2683991A1B86D340002299E6 /* AppDelegate.m in Sources */,
 				268399171B86D340002299E6 /* main.m in Sources */,
+				268399621B86D694002299E6 /* View+MASAdditions.m in Sources */,
+				2683995A1B86D694002299E6 /* MASCompositeConstraint.m in Sources */,
+				2683995E1B86D694002299E6 /* MASViewAttribute.m in Sources */,
+				2683995C1B86D694002299E6 /* MASConstraintMaker.m in Sources */,
+				268399601B86D694002299E6 /* NSArray+MASAdditions.m in Sources */,
+				2683995B1B86D694002299E6 /* MASConstraint.m in Sources */,
+				2683995D1B86D694002299E6 /* MASLayoutConstraint.m in Sources */,
+				2683993D1B86D61E002299E6 /* ImageScanViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

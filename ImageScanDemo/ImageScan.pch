@@ -1,0 +1,15 @@
+//
+//  ImageScan.pch
+//  ImageScanDemo
+//
+//  Created by huyang on 15/8/21.
+//  Copyright (c) 2015年 huyang. All rights reserved.
+//
+
+#ifndef ImageScanDemo_ImageScan_pch
+#define ImageScanDemo_ImageScan_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif
