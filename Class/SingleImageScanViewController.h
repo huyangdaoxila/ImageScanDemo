@@ -10,4 +10,6 @@
 
 @interface SingleImageScanViewController : UIViewController
 
+@property (strong , nonatomic) UIImage *displayImage ;
+
 @end

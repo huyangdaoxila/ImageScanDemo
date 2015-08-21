@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ImageScanViewController.h"
 
 @interface ViewController ()
 
@@ -33,6 +34,8 @@
 }
 - (IBAction)imageScanAction:(id)sender
 {
+    ImageScanViewController *imageScanVC = [[ImageScanViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:@{UIPageViewControllerOptionInterPageSpacingKey: @30}];
+    [self presentViewController:imageScanVC animated:YES completion:nil];
 }
 
 @end

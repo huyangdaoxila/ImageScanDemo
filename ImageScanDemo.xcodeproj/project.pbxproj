@@ -41,6 +41,9 @@
 		268399821B86D6EF002299E6 /* 14.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 268399721B86D6EF002299E6 /* 14.JPG */; };
 		268399831B86D6EF002299E6 /* 15.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 268399731B86D6EF002299E6 /* 15.JPG */; };
 		268399841B86D6EF002299E6 /* 16.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 268399741B86D6EF002299E6 /* 16.JPG */; };
+		268399891B86F942002299E6 /* CALayer+Transition.m in Sources */ = {isa = PBXBuildFile; fileRef = 268399861B86F942002299E6 /* CALayer+Transition.m */; };
+		2683998A1B86F942002299E6 /* UCZProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 268399881B86F942002299E6 /* UCZProgressView.m */; };
+		5C57420DDF56C08D11EE0FA1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD27C1B9529D347C6B73D0E8 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +114,13 @@
 		268399721B86D6EF002299E6 /* 14.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 14.JPG; sourceTree = "<group>"; };
 		268399731B86D6EF002299E6 /* 15.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 15.JPG; sourceTree = "<group>"; };
 		268399741B86D6EF002299E6 /* 16.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 16.JPG; sourceTree = "<group>"; };
+		268399851B86F942002299E6 /* CALayer+Transition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+Transition.h"; sourceTree = "<group>"; };
+		268399861B86F942002299E6 /* CALayer+Transition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Transition.m"; sourceTree = "<group>"; };
+		268399871B86F942002299E6 /* UCZProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCZProgressView.h; sourceTree = "<group>"; };
+		268399881B86F942002299E6 /* UCZProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCZProgressView.m; sourceTree = "<group>"; };
+		2FC3681AFF9F67D20D51E7C8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		A487C3E94A3B6DC115201669 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		BD27C1B9529D347C6B73D0E8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C57420DDF56C08D11EE0FA1 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +151,8 @@
 				268399131B86D340002299E6 /* ImageScanDemo */,
 				2683992D1B86D340002299E6 /* ImageScanDemoTests */,
 				268399121B86D340002299E6 /* Products */,
+				ABF3970DB57EDD3AF284EF0A /* Pods */,
+				99F700DCC616D291EB3C2C65 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -197,6 +210,10 @@
 		2683993A1B86D5BB002299E6 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				268399851B86F942002299E6 /* CALayer+Transition.h */,
+				268399861B86F942002299E6 /* CALayer+Transition.m */,
+				268399871B86F942002299E6 /* UCZProgressView.h */,
+				268399881B86F942002299E6 /* UCZProgressView.m */,
 				2683993B1B86D61E002299E6 /* ImageScanViewController.h */,
 				2683993C1B86D61E002299E6 /* ImageScanViewController.m */,
 				2683993E1B86D63D002299E6 /* SingleImageScanViewController.h */,
@@ -266,6 +283,23 @@
 			path = Pics;
 			sourceTree = "<group>";
 		};
+		99F700DCC616D291EB3C2C65 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD27C1B9529D347C6B73D0E8 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ABF3970DB57EDD3AF284EF0A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2FC3681AFF9F67D20D51E7C8 /* Pods.debug.xcconfig */,
+				A487C3E94A3B6DC115201669 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -273,9 +307,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 268399341B86D340002299E6 /* Build configuration list for PBXNativeTarget "ImageScanDemo" */;
 			buildPhases = (
+				55C7B05AE6699A2D7A696BB6 /* Check Pods Manifest.lock */,
 				2683990D1B86D340002299E6 /* Sources */,
 				2683990E1B86D340002299E6 /* Frameworks */,
 				2683990F1B86D340002299E6 /* Resources */,
+				83D33DE20B86C39E9F5FACCA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -377,6 +413,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		55C7B05AE6699A2D7A696BB6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		83D33DE20B86C39E9F5FACCA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2683990D1B86D340002299E6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -389,12 +458,14 @@
 				2683991A1B86D340002299E6 /* AppDelegate.m in Sources */,
 				268399171B86D340002299E6 /* main.m in Sources */,
 				268399621B86D694002299E6 /* View+MASAdditions.m in Sources */,
+				268399891B86F942002299E6 /* CALayer+Transition.m in Sources */,
 				2683995A1B86D694002299E6 /* MASCompositeConstraint.m in Sources */,
 				2683995E1B86D694002299E6 /* MASViewAttribute.m in Sources */,
 				2683995C1B86D694002299E6 /* MASConstraintMaker.m in Sources */,
 				268399601B86D694002299E6 /* NSArray+MASAdditions.m in Sources */,
 				2683995B1B86D694002299E6 /* MASConstraint.m in Sources */,
 				2683995D1B86D694002299E6 /* MASLayoutConstraint.m in Sources */,
+				2683998A1B86F942002299E6 /* UCZProgressView.m in Sources */,
 				2683993D1B86D61E002299E6 /* ImageScanViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -521,6 +592,7 @@
 		};
 		268399351B86D340002299E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FC3681AFF9F67D20D51E7C8 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -534,6 +606,7 @@
 		};
 		268399361B86D340002299E6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A487C3E94A3B6DC115201669 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -598,6 +671,7 @@
 				268399361B86D340002299E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		268399371B86D340002299E6 /* Build configuration list for PBXNativeTarget "ImageScanDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -606,6 +680,7 @@
 				268399391B86D340002299E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -10,4 +10,6 @@
 
 @interface ImageScanViewController : UIPageViewController
 
+@property (assign , nonatomic) NSInteger firstIndex ;
+
 @end
