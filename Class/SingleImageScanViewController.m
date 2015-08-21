@@ -24,9 +24,9 @@
     _imageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
     _imageView.image = _displayImage ;
     [self.view addSubview:_imageView];
-    [_imageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.view);
-    }];
+//    [_imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.edges.equalTo(self.view);
+//    }];
 }
 
 - (void)didReceiveMemoryWarning {
