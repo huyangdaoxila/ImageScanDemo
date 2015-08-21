@@ -16,15 +16,6 @@
 		268399311B86D340002299E6 /* ImageScanDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 268399301B86D340002299E6 /* ImageScanDemoTests.m */; };
 		2683993D1B86D61E002299E6 /* ImageScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2683993C1B86D61E002299E6 /* ImageScanViewController.m */; };
 		268399401B86D63D002299E6 /* SingleImageScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2683993F1B86D63D002299E6 /* SingleImageScanViewController.m */; };
-		2683995A1B86D694002299E6 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 268399441B86D694002299E6 /* MASCompositeConstraint.m */; };
-		2683995B1B86D694002299E6 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 268399471B86D694002299E6 /* MASConstraint.m */; };
-		2683995C1B86D694002299E6 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 268399491B86D694002299E6 /* MASConstraintMaker.m */; };
-		2683995D1B86D694002299E6 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 2683994B1B86D694002299E6 /* MASLayoutConstraint.m */; };
-		2683995E1B86D694002299E6 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 2683994F1B86D694002299E6 /* MASViewAttribute.m */; };
-		2683995F1B86D694002299E6 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 268399511B86D694002299E6 /* MASViewConstraint.m */; };
-		268399601B86D694002299E6 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 268399531B86D694002299E6 /* NSArray+MASAdditions.m */; };
-		268399611B86D694002299E6 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 268399561B86D694002299E6 /* NSLayoutConstraint+MASDebugAdditions.m */; };
-		268399621B86D694002299E6 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 268399581B86D694002299E6 /* View+MASAdditions.m */; };
 		268399751B86D6EF002299E6 /* 01.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 268399651B86D6EF002299E6 /* 01.JPG */; };
 		268399761B86D6EF002299E6 /* 02.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 268399661B86D6EF002299E6 /* 02.JPG */; };
 		268399771B86D6EF002299E6 /* 03.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 268399671B86D6EF002299E6 /* 03.JPG */; };
@@ -451,20 +442,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				268399611B86D694002299E6 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				2683991D1B86D340002299E6 /* ViewController.m in Sources */,
-				2683995F1B86D694002299E6 /* MASViewConstraint.m in Sources */,
 				268399401B86D63D002299E6 /* SingleImageScanViewController.m in Sources */,
 				2683991A1B86D340002299E6 /* AppDelegate.m in Sources */,
 				268399171B86D340002299E6 /* main.m in Sources */,
-				268399621B86D694002299E6 /* View+MASAdditions.m in Sources */,
 				268399891B86F942002299E6 /* CALayer+Transition.m in Sources */,
-				2683995A1B86D694002299E6 /* MASCompositeConstraint.m in Sources */,
-				2683995E1B86D694002299E6 /* MASViewAttribute.m in Sources */,
-				2683995C1B86D694002299E6 /* MASConstraintMaker.m in Sources */,
-				268399601B86D694002299E6 /* NSArray+MASAdditions.m in Sources */,
-				2683995B1B86D694002299E6 /* MASConstraint.m in Sources */,
-				2683995D1B86D694002299E6 /* MASLayoutConstraint.m in Sources */,
 				2683998A1B86F942002299E6 /* UCZProgressView.m in Sources */,
 				2683993D1B86D61E002299E6 /* ImageScanViewController.m in Sources */,
 			);
