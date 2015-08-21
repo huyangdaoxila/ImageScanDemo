@@ -63,6 +63,7 @@
 		268399081B86D340002299E6 = {
 			isa = PBXGroup;
 			children = (
+				2683993A1B86D5BB002299E6 /* Class */,
 				268399131B86D340002299E6 /* ImageScanDemo */,
 				2683992D1B86D340002299E6 /* ImageScanDemoTests */,
 				268399121B86D340002299E6 /* Products */,
@@ -117,6 +118,13 @@
 				2683992F1B86D340002299E6 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2683993A1B86D5BB002299E6 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Class;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,6 +358,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ImageScanDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -360,6 +369,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ImageScanDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
