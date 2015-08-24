@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2608B1C61B8AEEF500E9B916 /* white_quit@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2608B1C41B8AEEF500E9B916 /* white_quit@3x.png */; };
+		2608B1C71B8AEEF500E9B916 /* white_quit@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2608B1C51B8AEEF500E9B916 /* white_quit@2x.png */; };
 		268399171B86D340002299E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 268399161B86D340002299E6 /* main.m */; };
 		2683991A1B86D340002299E6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 268399191B86D340002299E6 /* AppDelegate.m */; };
 		2683991D1B86D340002299E6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2683991C1B86D340002299E6 /* ViewController.m */; };
@@ -51,6 +53,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2608B1C41B8AEEF500E9B916 /* white_quit@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "white_quit@3x.png"; sourceTree = "<group>"; };
+		2608B1C51B8AEEF500E9B916 /* white_quit@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "white_quit@2x.png"; sourceTree = "<group>"; };
 		268399111B86D340002299E6 /* ImageScanDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageScanDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		268399151B86D340002299E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		268399161B86D340002299E6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -210,6 +214,8 @@
 		2683993A1B86D5BB002299E6 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				2608B1C41B8AEEF500E9B916 /* white_quit@3x.png */,
+				2608B1C51B8AEEF500E9B916 /* white_quit@2x.png */,
 				268399851B86F942002299E6 /* CALayer+Transition.h */,
 				268399861B86F942002299E6 /* CALayer+Transition.m */,
 				268399871B86F942002299E6 /* UCZProgressView.h */,
@@ -390,6 +396,7 @@
 			files = (
 				268399821B86D6EF002299E6 /* 14.JPG in Resources */,
 				2683997E1B86D6EF002299E6 /* 10.JPG in Resources */,
+				2608B1C61B8AEEF500E9B916 /* white_quit@3x.png in Resources */,
 				2683997B1B86D6EF002299E6 /* 07.JPG in Resources */,
 				268399761B86D6EF002299E6 /* 02.JPG in Resources */,
 				2683997D1B86D6EF002299E6 /* 09.JPG in Resources */,
@@ -405,6 +412,7 @@
 				268399831B86D6EF002299E6 /* 15.JPG in Resources */,
 				268399251B86D340002299E6 /* LaunchScreen.xib in Resources */,
 				268399751B86D6EF002299E6 /* 01.JPG in Resources */,
+				2608B1C71B8AEEF500E9B916 /* white_quit@2x.png in Resources */,
 				268399221B86D340002299E6 /* Images.xcassets in Resources */,
 				2683997A1B86D6EF002299E6 /* 06.JPG in Resources */,
 			);

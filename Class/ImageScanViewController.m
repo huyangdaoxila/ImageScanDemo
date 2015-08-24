@@ -77,7 +77,7 @@
     self.dataSource = self ;
     self.view.backgroundColor = [UIColor blackColor];
     SingleImageScanViewController *currentVC = [self viewControllerAtIndex:_firstIndex];
-    
+    _imageModel = self.imageDatasource[_firstIndex];
     NSArray *viewControllers = @[currentVC];
     [self setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
     
@@ -122,6 +122,7 @@
         return nil ;
     }
     index -- ;
+    _imageModel = self.imageDatasource[index];
     // 返回的ViewController，将被添加到相应的UIPageViewController对象上。
     // UIPageViewController对象会根据UIPageViewControllerDataSource协议方法，自动来维护次序。
     // 不用我们去操心每个ViewController的顺序问题。
@@ -139,8 +140,14 @@
     if (index == self.imageDatasource.count) {
         return nil ;
     }
+    _imageModel = self.imageDatasource[index];
     return [self viewControllerAtIndex:index];
 }
+
+//- (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController
+//{
+//
+//}
 
 #pragma mark --- 添加 topView 和 bottomView
 
@@ -150,6 +157,20 @@
         if (!self.topView) {
             self.topView = [[ImageTopView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), self.topHeight)];
             self.topView.backgroundColor = self.topViewBackgroundColor;
+            
+            self.topView.pageIndicatorLabel.text = [NSString stringWithFormat:@"%ld/%ld",self.firstIndex+1,self.imageDatasource.count];
+            
+            UIButton *quitButton = [UIButton buttonWithType:UIButtonTypeCustom];
+            [quitButton setBackgroundColor:[UIColor clearColor]];
+            [quitButton setImage:[UIImage imageNamed:@"white_quit"] forState:UIControlStateNormal];
+            [quitButton addTarget:self action:@selector(quitAction:) forControlEvents:UIControlEventTouchUpInside];
+            [self.topView addSubview:quitButton];
+            [quitButton mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.centerY.equalTo(self.topView.mas_centerY);
+                make.height.equalTo(@40);
+                make.right.equalTo(self.topView.mas_right).offset(-10);
+                make.width.equalTo(@40);
+            }];
             [self.view addSubview:_topView];
         }
     }
@@ -205,6 +226,11 @@
     additionViewHidden = YES;
     [_topView hiddenAnimation:animation];
     [_bottomView hiddenAnimation:animation];
+}
+
+- (void)quitAction:(UIButton *)btn
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

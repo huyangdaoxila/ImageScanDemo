@@ -65,13 +65,15 @@
 {
     if (!_pageIndicatorLabel) {
         _pageIndicatorLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+        _pageIndicatorLabel.textColor = [UIColor whiteColor];
         _pageIndicatorLabel.textAlignment = NSTextAlignmentLeft;
         _pageIndicatorLabel.backgroundColor = [UIColor clearColor];
+        _pageIndicatorLabel.font = [UIFont systemFontOfSize:16.f];
         [self addSubview:_pageIndicatorLabel];
         [_pageIndicatorLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.mas_left).offset(15);
             make.height.equalTo(@44);
-            make.bottom.equalTo(self.mas_bottom);
+            make.bottom.equalTo(self.mas_bottom).offset(-10);
         }];
     }
     return _pageIndicatorLabel;

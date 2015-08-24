@@ -47,7 +47,7 @@
     
     ImageScanViewController *imageScanVC = [[ImageScanViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:@{UIPageViewControllerOptionInterPageSpacingKey: @30}];
     imageScanVC.showBottomView = YES ;
-    imageScanVC.showTopView = NO ;
+//    imageScanVC.showTopView = YES ;
     imageScanVC.firstIndex = 0 ;
     imageScanVC.imageDatasource = [[NSArray alloc] initWithArray:imageArray];
     [self presentViewController:imageScanVC animated:YES completion:nil];
