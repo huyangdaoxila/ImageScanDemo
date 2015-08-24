@@ -70,7 +70,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor blackColor];
-    
+    [self addTopView:_showTopView];
+    [self addBottomView:_showBottomView];
     
     self.currentPage = _firstIndex ;
     self.delegate = self ;
@@ -78,11 +79,9 @@
     self.view.backgroundColor = [UIColor blackColor];
     SingleImageScanViewController *currentVC = [self viewControllerAtIndex:_firstIndex];
     _imageModel = self.imageDatasource[_firstIndex];
+    [self setBottomViewTextWithModel:_imageModel];
     NSArray *viewControllers = @[currentVC];
     [self setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
-    
-    [self addTopView:_showTopView];
-    [self addBottomView:_showBottomView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -108,7 +107,19 @@
 // 根据数组元素值，得到下标值
 - (NSUInteger)indexOfViewController:(SingleImageScanViewController *)viewController
 {
-    return [self.imageDatasource indexOfObject:viewController.model];
+    NSUInteger index = [self.imageDatasource indexOfObject:viewController.model];
+    
+    if (index == 0) {
+        self.topView.pageIndicatorLabel.text = [NSString stringWithFormat:@"1/%u",self.imageDatasource.count];
+    }else if (index == self.imageDatasource.count - 1){
+        self.topView.pageIndicatorLabel.text = [NSString stringWithFormat:@"%u/%u",self.imageDatasource.count,self.imageDatasource.count];
+    }else{
+        self.topView.pageIndicatorLabel.text = [NSString stringWithFormat:@"%u/%u",index+1,self.imageDatasource.count];
+    }
+    
+    [self setBottomViewTextWithModel:viewController.model];
+    
+    return index;
 }
 
 #pragma mark --- UIPageViewControllerDataSource
@@ -122,7 +133,7 @@
         return nil ;
     }
     index -- ;
-    _imageModel = self.imageDatasource[index];
+    
     // 返回的ViewController，将被添加到相应的UIPageViewController对象上。
     // UIPageViewController对象会根据UIPageViewControllerDataSource协议方法，自动来维护次序。
     // 不用我们去操心每个ViewController的顺序问题。
@@ -133,6 +144,7 @@
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
 {
     NSInteger index = [self indexOfViewController:(SingleImageScanViewController *)viewController];
+
     if (index == NSNotFound) {
         return nil ;
     }
@@ -140,7 +152,7 @@
     if (index == self.imageDatasource.count) {
         return nil ;
     }
-    _imageModel = self.imageDatasource[index];
+    
     return [self viewControllerAtIndex:index];
 }
 
@@ -158,7 +170,7 @@
             self.topView = [[ImageTopView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), self.topHeight)];
             self.topView.backgroundColor = self.topViewBackgroundColor;
             
-            self.topView.pageIndicatorLabel.text = [NSString stringWithFormat:@"%ld/%ld",self.firstIndex+1,self.imageDatasource.count];
+            self.topView.pageIndicatorLabel.text = [NSString stringWithFormat:@"%u/%u",self.firstIndex+1,self.imageDatasource.count];
             
             UIButton *quitButton = [UIButton buttonWithType:UIButtonTypeCustom];
             [quitButton setBackgroundColor:[UIColor clearColor]];
@@ -226,6 +238,16 @@
     additionViewHidden = YES;
     [_topView hiddenAnimation:animation];
     [_bottomView hiddenAnimation:animation];
+}
+
+- (void)setBottomViewTextWithModel:(ImageModel *)model
+{
+    _imageModel = model ;
+    
+    if (_showBottomView == YES) {
+        self.bottomView.titleLabel.text = _imageModel.bottomTitle ;
+        self.bottomView.descView.text = _imageModel.bottomDesc ;
+    }
 }
 
 - (void)quitAction:(UIButton *)btn

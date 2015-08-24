@@ -41,6 +41,7 @@
         
         ImageModel *model = [[ImageModel alloc] init];
         model.image = img ;
+        model.index = i ;
         model.bottomDesc = [NSString stringWithFormat:@"这是第%d张图片",i+1];
         [imageArray addObject:model];
     }
