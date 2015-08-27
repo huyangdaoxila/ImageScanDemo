@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "VIPhotoView.h"
 #import "ImageModel.h"
 
 @protocol SingleImageScanViewControllerDelegate <NSObject>
@@ -21,6 +22,10 @@
 
 @property (strong , nonatomic) ImageModel *model ;
 
+@property (strong , nonatomic) VIPhotoView *photoView ;
+
 @property (weak   , nonatomic) id<SingleImageScanViewControllerDelegate>singleTapDelegate ;
+
+- (void)resetModel:(ImageModel *)model ;
 
 @end

@@ -39,6 +39,8 @@
 		2683998D1B871492002299E6 /* ImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2683998C1B871492002299E6 /* ImageModel.m */; };
 		268399901B87158D002299E6 /* ImageTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2683998F1B87158D002299E6 /* ImageTopView.m */; };
 		268399931B8715A2002299E6 /* ImageBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 268399921B8715A2002299E6 /* ImageBottomView.m */; };
+		26F80A6D1B8EA6AA00A6B379 /* VIPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26F80A6C1B8EA6AA00A6B379 /* VIPhotoView.m */; };
+		26F80A6F1B8EAD9700A6B379 /* placeholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 26F80A6E1B8EAD9700A6B379 /* placeholder@2x.png */; };
 		5C57420DDF56C08D11EE0FA1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD27C1B9529D347C6B73D0E8 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -122,6 +124,9 @@
 		2683998F1B87158D002299E6 /* ImageTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTopView.m; sourceTree = "<group>"; };
 		268399911B8715A2002299E6 /* ImageBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageBottomView.h; sourceTree = "<group>"; };
 		268399921B8715A2002299E6 /* ImageBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageBottomView.m; sourceTree = "<group>"; };
+		26F80A6B1B8EA6AA00A6B379 /* VIPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VIPhotoView.h; sourceTree = "<group>"; };
+		26F80A6C1B8EA6AA00A6B379 /* VIPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VIPhotoView.m; sourceTree = "<group>"; };
+		26F80A6E1B8EAD9700A6B379 /* placeholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "placeholder@2x.png"; sourceTree = "<group>"; };
 		2FC3681AFF9F67D20D51E7C8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A487C3E94A3B6DC115201669 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		BD27C1B9529D347C6B73D0E8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -214,6 +219,9 @@
 		2683993A1B86D5BB002299E6 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				26F80A6E1B8EAD9700A6B379 /* placeholder@2x.png */,
+				26F80A6B1B8EA6AA00A6B379 /* VIPhotoView.h */,
+				26F80A6C1B8EA6AA00A6B379 /* VIPhotoView.m */,
 				2608B1C41B8AEEF500E9B916 /* white_quit@3x.png */,
 				2608B1C51B8AEEF500E9B916 /* white_quit@2x.png */,
 				268399851B86F942002299E6 /* CALayer+Transition.h */,
@@ -406,6 +414,7 @@
 				268399791B86D6EF002299E6 /* 05.JPG in Resources */,
 				268399201B86D340002299E6 /* Main.storyboard in Resources */,
 				268399771B86D6EF002299E6 /* 03.JPG in Resources */,
+				26F80A6F1B8EAD9700A6B379 /* placeholder@2x.png in Resources */,
 				268399811B86D6EF002299E6 /* 13.JPG in Resources */,
 				2683997F1B86D6EF002299E6 /* 11.JPG in Resources */,
 				268399801B86D6EF002299E6 /* 12.JPG in Resources */,
@@ -473,6 +482,7 @@
 				268399171B86D340002299E6 /* main.m in Sources */,
 				268399891B86F942002299E6 /* CALayer+Transition.m in Sources */,
 				268399931B8715A2002299E6 /* ImageBottomView.m in Sources */,
+				26F80A6D1B8EA6AA00A6B379 /* VIPhotoView.m in Sources */,
 				2683998A1B86F942002299E6 /* UCZProgressView.m in Sources */,
 				2683993D1B86D61E002299E6 /* ImageScanViewController.m in Sources */,
 			);

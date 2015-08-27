@@ -108,18 +108,45 @@
 - (NSUInteger)indexOfViewController:(SingleImageScanViewController *)viewController
 {
     NSUInteger index = [self.imageDatasource indexOfObject:viewController.model];
-    
+    NSInteger count = self.imageDatasource.count ;
     if (index == 0) {
-        self.topView.pageIndicatorLabel.text = [NSString stringWithFormat:@"1/%u",self.imageDatasource.count];
+        
+        [self setTopViewPageIndicatorLabelWithCurrentIndex:1 andImageDatasourceCount:count];
+
     }else if (index == self.imageDatasource.count - 1){
-        self.topView.pageIndicatorLabel.text = [NSString stringWithFormat:@"%u/%u",self.imageDatasource.count,self.imageDatasource.count];
+        
+        [self setTopViewPageIndicatorLabelWithCurrentIndex:count andImageDatasourceCount:count];
+
     }else{
-        self.topView.pageIndicatorLabel.text = [NSString stringWithFormat:@"%u/%u",index+1,self.imageDatasource.count];
+        
+        [self setTopViewPageIndicatorLabelWithCurrentIndex:index+1 andImageDatasourceCount:count];
+
     }
     
     [self setBottomViewTextWithModel:viewController.model];
     
     return index;
+}
+
+- (void)setTopViewPageIndicatorLabelWithCurrentIndex:(NSInteger)currentIndex andImageDatasourceCount:(NSInteger)count
+{
+    NSString *c_index_str = [NSString stringWithFormat:@"%ld",currentIndex] ;
+    NSString *total_count_str = [NSString stringWithFormat:@"/%ld",count] ;
+    
+    UIFont *index_font = [UIFont systemFontOfSize:18.f];
+    UIFont *total_font = [UIFont systemFontOfSize:14.f];
+    
+    UIColor *white = [UIColor whiteColor];
+    
+    NSAttributedString *currentIndexStr = [[NSAttributedString alloc] initWithString:c_index_str attributes:@{NSFontAttributeName:index_font,NSForegroundColorAttributeName:white}];
+    
+    NSAttributedString *totalCountStr = [[NSAttributedString alloc] initWithString:total_count_str attributes:@{NSFontAttributeName:total_font,NSForegroundColorAttributeName:white}];
+    
+    NSMutableAttributedString *finalAttrStr = [[NSMutableAttributedString alloc] init];
+    [finalAttrStr appendAttributedString:currentIndexStr];
+    [finalAttrStr appendAttributedString:totalCountStr];
+    
+    self.topView.pageIndicatorLabel.attributedText = finalAttrStr;
 }
 
 #pragma mark --- UIPageViewControllerDataSource
@@ -156,10 +183,6 @@
     return [self viewControllerAtIndex:index];
 }
 
-//- (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController
-//{
-//
-//}
 
 #pragma mark --- 添加 topView 和 bottomView
 
@@ -170,7 +193,9 @@
             self.topView = [[ImageTopView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), self.topHeight)];
             self.topView.backgroundColor = self.topViewBackgroundColor;
             
-            self.topView.pageIndicatorLabel.text = [NSString stringWithFormat:@"%u/%u",self.firstIndex+1,self.imageDatasource.count];
+            NSInteger currentIndex = self.firstIndex + 1 ;
+            NSInteger totalCount = self.imageDatasource.count ;
+            [self setTopViewPageIndicatorLabelWithCurrentIndex:currentIndex andImageDatasourceCount:totalCount];
             
             UIButton *quitButton = [UIButton buttonWithType:UIButtonTypeCustom];
             [quitButton setBackgroundColor:[UIColor clearColor]];
